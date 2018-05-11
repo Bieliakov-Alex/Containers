@@ -8,6 +8,10 @@ template<typename T>
 void printVector(const vector<T>& v)
 {
 	for (auto i : v) { cout << i << " "; }
+	/*for (auto i = v.begin(); i != v.end(); ++i)
+	{
+		cout << *i << " ";
+	}*/
 	cout << endl;
 }
 
@@ -19,7 +23,7 @@ private:
 	int data;
 	C() {}
 public:
-	friend ostream& operator<<(ostream& o, const C& c);
+	int getData() const;
 	explicit C(int d) :data{ d } { cout << "Construct C with int " << data << endl; }
 	~C() { cout << "Destruct C with int " << data << endl; }
 	C(const C& c) :data{ c.data } { cout << "Construct C with copy " << data << endl; }
@@ -31,7 +35,6 @@ public:
 
 int main()
 {
-
 	//Демонстрация конструкторов
 	//по умолчанию
 	vector<int> v1;
@@ -69,6 +72,8 @@ int main()
 	printVector(vsecond);
 
 	//функция assign
+	printVector(v1);
+	cout << "V1 printed!";
 	cout << endl << "Assign function" << endl;
 	//количество элементов и их значение
 	v1.assign(10, 0);
@@ -223,6 +228,11 @@ int main()
 
 ostream & operator<<(ostream & o, const C & c)
 {
-	o << c.data;
+	o << c.getData();
 	return o;
+}
+
+int C::getData() const
+{
+	return data;
 }
