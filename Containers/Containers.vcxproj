@@ -23,6 +23,7 @@
     <ProjectGuid>{32827DF1-FE3C-43D2-8E3C-37A89B2E8B17}</ProjectGuid>
     <RootNamespace>Containers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>Vectors</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
