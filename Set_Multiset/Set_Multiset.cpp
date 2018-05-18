@@ -9,7 +9,15 @@ class MyComp
 public:
 	bool operator()(const int& first, const int& second) const
 	{
-		return !(first < second);
+		if (first == second)
+		{
+			return false;
+		}
+		else
+		{
+			return !(first < second);
+		}
+		
 		/*
 		if(first<second)
 		{
@@ -51,6 +59,9 @@ int main()
 	//TODO: определить, как в lower_bound использовать свой компаратор
 
 	auto it=s2.lower_bound(3);
+	cout << *it << endl;
+
+	auto s1it = s1.lower_bound(3);
 	cout << *it << endl;
 
 	//upper_bound
