@@ -42,7 +42,9 @@ int main()
 	cout << (comp(a, b) ? "a>=b" : "a<b") << endl;
 
 	set<int, MyComp> s1({ 1,2,3,4 });
-
+	set<int> s2({ 1,2,3,4 });
+	PrintSet(s1);
+	PrintSet(s2);
 
 	_getch();
 	return 0;
