@@ -29,7 +29,7 @@ int main()
 	MyComp comp;
 	int a = 0, b = 0;
 	cin >> a >> b;
-	cout << (comp(a, b) ? "a>b" : "a<b") << endl;
+	cout << (comp(a, b) ? "a>=b" : "a<b") << endl;
 
 	_getch();
 	return 0;
