@@ -9,14 +9,15 @@ class MyComp
 public:
 	bool operator()(const int& first, const int& second) const
 	{
-		if (first == second)
+		return first == second ? false : !(first < second);
+		/*if (first == second)
 		{
 			return false;
 		}
 		else
 		{
 			return !(first < second);
-		}
+		}*/
 		
 		/*
 		if(first<second)
