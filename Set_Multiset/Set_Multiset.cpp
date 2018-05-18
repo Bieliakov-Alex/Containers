@@ -7,7 +7,7 @@ using namespace std;
 class MyComp
 {
 public:
-	bool operator()(const int& first, const int& second)
+	bool operator()(const int& first, const int& second) const
 	{
 		return !(first < second);
 		/*
@@ -42,9 +42,17 @@ int main()
 	cout << (comp(a, b) ? "a>=b" : "a<b") << endl;
 
 	set<int, MyComp> s1({ 1,2,3,4 });
-	set<int> s2({ 1,2,3,4 });
+	set<int> s2({ 1,2,3,4,5 });
 	PrintSet(s1);
 	PrintSet(s2);
+
+	//lower_bound
+	auto it=s2.lower_bound(3);
+	cout << *it << endl;
+
+	//upper_bound
+	auto it1 = s2.upper_bound(3);
+	cout << *it1 << endl;
 
 	_getch();
 	return 0;
