@@ -47,6 +47,9 @@ int main()
 	PrintSet(s2);
 
 	//lower_bound
+
+	//TODO: определить, как в lower_bound использовать свой компаратор
+
 	auto it=s2.lower_bound(3);
 	cout << *it << endl;
 
